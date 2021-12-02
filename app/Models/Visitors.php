@@ -9,6 +9,6 @@ class Visitors extends Model
     protected $table = 'visitors';
 
     public function position(){
-        return $this->hasOne('App/Models/USerPosition', 'id_user', 'id');
+        return $this->hasOne('App\Models\UserPosition', 'id_user', 'id');
     }
 }

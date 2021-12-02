@@ -23,3 +23,8 @@ Route::get('position', 'User\UserPositionController@get_position');
 Route::post('update_position', 'User\UserPositionController@update_position');
 
 Route::get('visitors', 'VisitorController@getVisitors');
+
+Route::post('login', 'User\UserController@login');
+Route::get('login', 'User\UserController@get_login');
+Route::post('visibleLocation', 'User\UserController@visibleLocation');
+Route::post('statusVisible', 'User\UserController@statusVisible');

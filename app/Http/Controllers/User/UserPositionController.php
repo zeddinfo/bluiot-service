@@ -36,7 +36,9 @@ class UserPositionController extends Controller
 
     public function get_position(Request $request)
     {
-        return response()->json(UserPosition::all(), 200);
+        // $model = UserPosition::with('users', 'visitors')->get();
+        // dd(UserPosition::with('users', 'visitors')->get());
+        return response()->json(UserPosition::with('users', 'visitors')->get(), 200);
     }
 
     public function update_position(Request $request)
